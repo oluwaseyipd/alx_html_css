@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Source Sans 3", sans-serif;
+}
+
+:root{
+    --primary-color: #FF6565;
+    --dark-color: #000;
+    --light-color: #2b2727;
+    --link-hover:rgba(255, 101, 101, 0.9);
+    --btn-hover: #fd4e4e;
+}
+
+.btn{
+    padding: 16px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    background: var(--primary-color);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover{
+     background: var(--btn-hover);
+}
+
+
+
+
+header {
+    height: 100vh;
+    background: url("/assets/img/headphones_hero_1.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 200px;
+}
+
+.navbar .logo img{
+    width: 70%;
+}
+
+.navbar .icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+}
+.navbar .menu{
+    width: 30px;
+    transform: rotateY('180deg');
+
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbar ul a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.navbar ul a:hover{
+    color: var(--link-hover);
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hero_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    max-width: 1100px;
+    color: white;
+}
+
+.hero_container h2{
+    font-size: 40px;
+}
+
+.hero_container p{
+    font-size: 20px;
+}
+
+.hero_container .hero_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_container .hero_box .btn{
+    margin-top: 50px;
+}
+
+.hero_container .hero_description{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 16px;
+        margin: 20px;
+    }
+
+    .navbar .logo img{
+    width: 50%;
+}
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero_container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .hero_container h2 {
+        font-size: 28px;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .hero_container p,
+    .hero_container .hero_description {
+        font-size: 16px;
+        padding: 0 5px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
